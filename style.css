@@ -1,11 +1,32 @@
 /*
-Theme Name: FFLAssist Child Theme
+Theme Name: FFLAssist Kadence Child Theme
 Author: Cap Web Solutions | Matt Ryan
+Author URI: https://capwebsolutions.com/
 Description: FFLAssist Child Theme for Kadence
 Version: 1.0
 Template: kadence
-
+License: GNU General Public License v3.0 (or later)
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: fflassist-child
+GitHub Theme URI: https://github.com/CapWebSolutions/fflassist-child-theme/
 This is the child theme for Kadence theme, generated with Generate Child Theme plugin by catchthemes.
 
 (optional values you can add: Theme URI, Author URI, License, License URI, Tags, Text Domain)
 */
+
+/* Establish styling for login / logout nav item */
+#primary-menu > li > a.loginout {
+    color: var(--global-palette3); 
+    font-style: normal; 
+    font-weight: 600; 
+    font-size: 20px; 
+    font-family: var(--global-primary-nav-font-family); 
+    padding-left: calc(1.9em / 2);
+    padding-right: calc(1.9em / 2);
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    text-decoration: none;
+}
+#primary-menu > li > a:hover {
+    color: var(--global-palette2);
+}

@@ -15,3 +15,24 @@ function fflassist_child_theme_enqueue_styles() {
 /*
  * Your code goes below
  */
+function custom_nav_menu_items($items, $args) {
+    if ($args->theme_location == 'primary') {
+        if (is_user_logged_in()) {
+            $loginoutlink = '<li><a class="loginout" href="' . wp_logout_url() . '">Log Out</a></li>';
+        } else {
+            $loginoutlink = '<li><a class="loginout" href="' . wp_login_url() . '">Log In</a></li>';
+        }
+        $items .= $loginoutlink;
+    }
+    error_log( print_r( (object)
+    [
+        'file' => __FILE__,
+        'method' => __METHOD__,
+        'line' => __LINE__,
+        'dump' => [
+            $items,
+        ],
+    ], true ) );
+    return $items;
+}
+// add_filter('wp_nav_menu_items', 'custom_nav_menu_items', 10, 2);
