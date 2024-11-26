@@ -30,3 +30,48 @@ This is the child theme for Kadence theme, generated with Generate Child Theme p
 #primary-menu > li > a:hover {
     color: var(--global-palette2);
 }
+
+/* Hide Site Name in header when displayed with logo title and tag */
+#main-header .site-title-wrap p.site-title {
+	display: none;
+}
+/* End of hide site name */
+
+/* Gravity Forms Form Styling - Required text & Submit button */
+#gform_wrapper_2 > div > p,
+#gform_wrapper_3 > div > p,
+#gform_wrapper_4 > div > p {
+	display: none;
+}
+
+#gform_submit_button_2,
+#gform_submit_button_3,
+#gform_submit_button_4 {
+	border-radius: 100px;
+	font-size: 1.125rem;
+	margin-top: 1.75rem;
+}
+
+#gform_submit_button_2:hover,
+#gform_submit_button_3:hover,
+#gform_submit_button_4:hover {
+	background-color: var(--global-palette-btn-bg-hover, #1768ea);
+}
+/* End of Contact Form Styling - Submit button */
+
+/* Minimal Subscription styling */
+#gform_4 > div.gform-body.gform_body { 
+	padding-left : 1.5rem;
+	padding-right: 1.5rem;
+}
+/* end of Minimal Subscription styling */
+
+/* Users list table stylin */
+#Userslist,
+#Userslist > tbody > tr,
+#Userslist > tbody > tr > td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 2px;
+}
+/* End Users list table stylin */
