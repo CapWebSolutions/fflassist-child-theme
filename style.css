@@ -3,15 +3,13 @@ Theme Name: FFLAssist Kadence Child Theme
 Author: Cap Web Solutions | Matt Ryan
 Author URI: https://capwebsolutions.com/
 Description: FFLAssist Child Theme for Kadence
-Version: 1.1.2
+Version: 1.1.3
 Template: kadence
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: fflassist-child
 GitHub Theme URI: https://github.com/CapWebSolutions/fflassist-child-theme/
 This is the child theme for Kadence theme, generated with Generate Child Theme plugin by catchthemes.
-
-(optional values you can add: Theme URI, Author URI, License, License URI, Tags, Text Domain)
 */
 
 /* Establish styling for login / logout nav item */
@@ -108,3 +106,90 @@ h3.sitemap-heading3 {
 /* 
   End of Sitemap Styling 
  ****************************************************************** */
+
+
+/* Turn off Browse Products button on My Account */
+p.no_subscriptions > a.woocommerce-Button {
+	display: none;
+}
+/* End of: Turn off Browse Products button on My Account */
+
+/* Turn off price and Add To Cart on custom consulting */
+#product-21274 > div.summary.entry-summary > p.price,
+#product-21274 > div.summary.entry-summary > form {
+	display: none;
+}
+/* End: Turn off price and Add To Cart on custom consulting */
+
+
+
+
+ /* Style external links with icon */
+
+ /* This isn't working yet. It adds the icon everywhere. */
+/* *, *::before, *::after {
+	box-sizing: border-box;
+} */
+
+/* a[href^="http"]:not([href*="assist"]) {
+	padding-right: 1.25em;
+	position: relative;
+} */
+/* a[href^="http"]:not([href*="assist"])::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 12.2 12.2' width='14' height='14'%3E%3Cpath d='M5.7 0v1.5h4L4.5 6.7l1 1.1 5.3-5.2v3.9h1.4V0z'/%3E%3Cpath fill='none' d='M3.4 6.7l3-2.9H1.5v7h7V5.9l-3 2.9z'/%3E%3Cpath d='M8.5 5.9v4.9h-7v-7h4.9l1.5-1.6H0v10h10V4.4z'/%3E%3C/svg%3E");
+    transform: translateY(0.25em);
+} */
+/* End: Style external links with icon */
+
+
+/* PMPRo login/out icon on main nav heading */
+#main-header a.header-account-button {
+	font-family: Barlow, sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+}
+#main-header a.header-account-button:hover {
+	color: rgb(13,242,5);
+}
+/* End: PMPRo login/out on main nav heading */
+
+/* Footer Copyright Styling */
+.cwsattribution,
+#colophon > div > div.site-bottom-footer-wrap.site-footer-row-container.site-footer-focus-item.site-footer-row-layout-standard.site-footer-row-tablet-layout-default.site-footer-row-mobile-layout-default > div > div.site-container > div > div.site-footer-bottom-section-1.site-footer-section.footer-section-inner-items-1 > div > div > div > div.footer-html-inner > div {
+	font-size: .7em;
+	margin-top: -15px;
+}
+
+/* Turn off Browse Products button on My Account */
+p.no_subscriptions > a.woocommerce-Button {
+	display: none;
+}
+/* End of: Turn off Browse Products button on My Account */
+
+/* Turn off price and Add To Cart on custom consulting */
+#product-21274 > div.summary.entry-summary > p.price,
+#product-21274 > div.summary.entry-summary > form {
+	display: none;
+}
+/* End: Turn off price and Add To Cart on custom consulting */
+
+
+
+/* Events Archive Page */
+article#post-24486 {
+	margin-top: 250px;
+}
+/* End: Events Archive Page */
+
+.more-faq { 
+	max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
