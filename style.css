@@ -38,22 +38,28 @@ This is the child theme for Kadence theme, generated with Generate Child Theme p
 /* Gravity Forms Form Styling - Required text & Submit button */
 #gform_wrapper_2 > div > p,
 #gform_wrapper_3 > div > p,
-#gform_wrapper_4 > div > p {
+#gform_wrapper_4 > div > p,
+#gform_wrapper_5 > div > p {
 	display: none;
 }
 
 #gform_submit_button_2,
 #gform_submit_button_3,
-#gform_submit_button_4 {
+#gform_submit_button_4,
+#gform_submit_button_5 {
 	border-radius: 100px;
 	font-size: 1.125rem;
 	margin-top: 1.75rem;
+    background-color: var(--global-palette-btn-bg, #29a632);
+    border-color: var(--global-palette-btn-bg, #29a632);
 }
 
 #gform_submit_button_2:hover,
 #gform_submit_button_3:hover,
-#gform_submit_button_4:hover {
-	background-color: var(--global-palette-btn-bg-hover, #1768ea);
+#gform_submit_button_4:hover,
+#gform_submit_button_5:hover {
+	background-color: var(--global-palette-btn-bg-hover, #29a632);
+    border-color: var(--global-palette-btn-bg-hover, #29a632);
 }
 /* End of Contact Form Styling - Submit button */
 
@@ -68,7 +74,7 @@ This is the child theme for Kadence theme, generated with Generate Child Theme p
 #Userslist,
 #Userslist > tbody > tr,
 #Userslist > tbody > tr > td {
-	border: 1px solid black;
+	border: 1px solid #29a632;
 	border-collapse: collapse;
 	padding: 2px;
 }
@@ -107,58 +113,11 @@ h3.sitemap-heading3 {
   End of Sitemap Styling 
  ****************************************************************** */
 
-
 /* Turn off Browse Products button on My Account */
 p.no_subscriptions > a.woocommerce-Button {
 	display: none;
 }
 /* End of: Turn off Browse Products button on My Account */
-
-/* Turn off price and Add To Cart on custom consulting */
-#product-21274 > div.summary.entry-summary > p.price,
-#product-21274 > div.summary.entry-summary > form {
-	display: none;
-}
-/* End: Turn off price and Add To Cart on custom consulting */
-
-
-
-
- /* Style external links with icon */
-
- /* This isn't working yet. It adds the icon everywhere. */
-/* *, *::before, *::after {
-	box-sizing: border-box;
-} */
-
-/* a[href^="http"]:not([href*="assist"]) {
-	padding-right: 1.25em;
-	position: relative;
-} */
-/* a[href^="http"]:not([href*="assist"])::after {
-    position: absolute;
-    content: '';
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-left: 0.25em;
-    background-size: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 12.2 12.2' width='14' height='14'%3E%3Cpath d='M5.7 0v1.5h4L4.5 6.7l1 1.1 5.3-5.2v3.9h1.4V0z'/%3E%3Cpath fill='none' d='M3.4 6.7l3-2.9H1.5v7h7V5.9l-3 2.9z'/%3E%3Cpath d='M8.5 5.9v4.9h-7v-7h4.9l1.5-1.6H0v10h10V4.4z'/%3E%3C/svg%3E");
-    transform: translateY(0.25em);
-} */
-/* End: Style external links with icon */
-
-
-/* PMPRo login/out icon on main nav heading */
-#main-header a.header-account-button {
-	font-family: Barlow, sans-serif;
-	font-weight: 600;
-	font-size: 20px;
-}
-#main-header a.header-account-button:hover {
-	color: rgb(13,242,5);
-}
-/* End: PMPRo login/out on main nav heading */
 
 /* Footer Copyright Styling */
 .cwsattribution,
@@ -173,14 +132,14 @@ p.no_subscriptions > a.woocommerce-Button {
 }
 /* End of: Turn off Browse Products button on My Account */
 
-/* Turn off price and Add To Cart on custom consulting */
+/* Turn off price and Add To Cart on custom consulting,
+   Turn off price on Demo Subscription  */
+#product-24666 > div.summary.entry-summary > p.price,
 #product-21274 > div.summary.entry-summary > p.price,
 #product-21274 > div.summary.entry-summary > form {
 	display: none;
 }
 /* End: Turn off price and Add To Cart on custom consulting */
-
-
 
 /* Events Archive Page */
 article#post-24486 {
@@ -188,8 +147,10 @@ article#post-24486 {
 }
 /* End: Events Archive Page */
 
+/* Center MORE FAQ on /faq-help/ page */
 .more-faq { 
 	max-width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
+/* END: Center MORE FAQ on /faq-help/ page */
