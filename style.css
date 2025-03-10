@@ -3,7 +3,7 @@ Theme Name: FFLAssist Kadence Child Theme
 Author: Cap Web Solutions | Matt Ryan
 Author URI: https://capwebsolutions.com/
 Description: FFLAssist Child Theme for Kadence
-Version: 1.1.5
+Version: 1.1.6
 Template: kadence
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -39,14 +39,18 @@ This is the child theme for Kadence theme, generated with Generate Child Theme p
 #gform_wrapper_2 > div > p,
 #gform_wrapper_3 > div > p,
 #gform_wrapper_4 > div > p,
-#gform_wrapper_5 > div > p {
+#gform_wrapper_5 > div > p,
+#gform_wrapper_8 > div > p,
+#gform_wrapper > div > p  {
 	display: none;
 }
 
 #gform_submit_button_2,
 #gform_submit_button_3,
 #gform_submit_button_4,
-#gform_submit_button_5 {
+#gform_submit_button_5,
+#gform_submit_button_8,
+#gform_submit_button {
 	border-radius: 100px;
 	font-size: 1.125rem;
 	margin-top: 1.75rem;
@@ -57,11 +61,13 @@ This is the child theme for Kadence theme, generated with Generate Child Theme p
 #gform_submit_button_2:hover,
 #gform_submit_button_3:hover,
 #gform_submit_button_4:hover,
-#gform_submit_button_5:hover {
+#gform_submit_button_5:hover,
+#gform_submit_button_8:hover,
+#gform_submit_button:hover  {
 	background-color: var(--global-palette-btn-bg-hover, #29a632);
     border-color: var(--global-palette-btn-bg-hover, #29a632);
 }
-/* End of Contact Form Styling - Submit button */
+/* End of Contact Form Styling - Submit buttons */
 
 /* Minimal Subscription styling */
 #gform_4 > div.gform-body.gform_body { 
