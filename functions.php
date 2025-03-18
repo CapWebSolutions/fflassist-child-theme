@@ -37,15 +37,3 @@
      return wp_parse_args( $new_defaults, $defaults );
  }
  add_filter( 'kadence_theme_options_defaults', 'fflassist_child_change_option_defaults', 20 );
-
-
- function capweb_fflassist_portal_content() {
-    $url = rwmb_meta( 'bc_logon_url', [ 'object_type' => 'user' ], get_current_user_id() );
-    if ( empty( $url ) ) {
-      $url = home_url( '/contact?logon-url-not-set' );
-    }
-    ?>
-    <a class="button kb-btn-global-inherit" href="<?php echo esc_url( $url ); ?>" target='_blank' rel="noopener noreferrer"><?php esc_html_e( 'Access FFLAssist Portal Here', 'fflassist-core-functionality' ); ?></a>
-    <?php
-  }
-  add_action( 'woocommerce_account_fflassist-portal_endpoint', 'capweb_fflassist_portal_content' );
