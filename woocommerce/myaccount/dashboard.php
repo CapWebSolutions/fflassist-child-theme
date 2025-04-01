@@ -26,11 +26,14 @@ add_filter('woocommerce_account_dashboard', 'cws_add_ffl_license_no_to_my_accoun
 function cws_add_ffl_license_no_to_my_account( $user_id ) {
    if ( is_user_logged_in() ) {
 		$user_id = get_current_user_id();
-		$atf_ffl_number = get_user_meta( $user_id, 'bc_atf_ffl_number', true );
-		$bc_url = rwmb_meta( 'bc_logon_url', [ 'object_type' => 'user' ], $user_id );
+		$bc_atf_ffl_number = get_user_meta( $user_id, 'bc_atf_ffl_number', true );
+		$bc_user_id = rwmb_meta( 'bc_user_id', [ 'object_type' => 'user' ], $user_id );
+		$bc_tenant_id = rwmb_meta( 'bc_tenant_id', [ 'object_type' => 'user' ], $user_id);
+		$bc_database = rwmb_meta( 'bc_database', [ 'object_type' => 'user' ], $user_id );
+		$bc_logon_url = rwmb_meta( 'bc_logon_url', [ 'object_type' => 'user' ], $user_id );
 
-		if ( empty( $atf_ffl_number ) ) {
-			$atf_ffl_number = '<em>Unassigned</em>';
+		if ( empty( $bc_atf_ffl_number ) ) {
+			$bc_atf_ffl_number = '<em>Unassigned</em>';
 		}
 
 		?>
@@ -39,17 +42,16 @@ function cws_add_ffl_license_no_to_my_account( $user_id ) {
 					<h2>FFLAssist Account Meta Information</h2>
 				</div>
 				<p><div>ATF FFL Number: </div>
-				<?php echo $atf_ffl_number; ?></p>
+				<?php echo $bc_atf_ffl_number; ?></p>
 				<div>Logon URL: <br>
 		<?php
 
-		if ( empty( $bc_url ) ) {
-				// $bc_url = home_url( '/contact?logon-url-not-set' );
-				$bc_url = '<em>Unassigned</em><br>Your account setup is not yet complete. Please check back.';
-				echo $bc_url;
-		} else {
+		if ( empty( $bc_user_id ) || ( empty( $bc_tenant_id ) && empty( $bc_database ) ) ) {
+			$bc_url = '<em>Unassigned</em><br>Your account setup is not yet complete. Please check back.';
+			echo $bc_url;
+		} else if  ( empty( $bc_logon_url ) ) {
+			$bc_url = 'https://businesscentral.dynamics.com/'. $bc_tenant_id . '/' . $bc_database . '/';
 			echo '<a href="' . $bc_url . '">' . $bc_url . '</a>';
-			
 		}
 		?>
 				</div> <!-- Logon URL -->
